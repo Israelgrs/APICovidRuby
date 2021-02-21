@@ -1,0 +1,20 @@
+<h1 text align="center">Casos confirmados</h1>
+
+<table text align="center">
+     <thead>
+        <td>Estado</td>
+        <td>Confirmados</td>
+        <td>Última atualização</td>
+    </thead>
+    <tbody>
+        <% @confirmed.each do |confirmed| %>
+            <tr>
+            <td><%= confirmed['provinceState']%></td>
+            <td><%= confirmed['confirmed']%></td>
+            <td><%= Time.at(confirmed['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S')%></td>
+            </tr>
+        <% end %>
+
+    </tbody>
+</table>
+

@@ -1,0 +1,18 @@
+<h1 text align="center">Mortes por Covid</h1>
+
+<table text align="center">
+    <thead>
+        <td>Estado</td>
+        <td>Mortes</td>
+        <td>Última atualização</td> 
+    </thead>
+    <tbody>
+        <% @deaths.each do |deaths| %>
+         <tr>
+           <td><%= deaths ['provinceState']%></td>
+           <td><%= deaths ['deaths']%></td>
+           <td><%= Time.at(deaths ['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S')%></td>
+         </tr>
+         <% end %>   
+     </tbody>
+</table>

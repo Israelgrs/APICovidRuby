@@ -1,0 +1,7 @@
+<h1 text align="center">Dados atualizados Covid19 no Brasil</h1>
+<li><%= link_to "Confirmados (Por estado)", home_confirmed_path%></li>
+<li><%= link_to "Recuperados (Por estado)", home_recovered_path%></li>
+<li><%= link_to "Mortes (Por estado)", home_deaths_path%></li>
+<p text align="center">Confirmados: <%=@summary ['confirmed']['value']%></p>
+<p text align="center">Recuperados: <%=@summary ['recovered']['value']%></p>
+<p text align="center">Mortes: <%=@summary ['deaths']['value']%></p>
